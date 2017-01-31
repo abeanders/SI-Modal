@@ -18,7 +18,8 @@ $(document).ready(function() {
         openModal($(this), event);
     });
 
-    $(window).on('click', function() {
+    // make sure we target the parent, not the iframe
+    $(window.parent.document).on('click', function() {
         closeModal();
     });
 
